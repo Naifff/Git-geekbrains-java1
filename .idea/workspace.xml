@@ -2,59 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5afb97c8-66e9-45b9-ac70-82166783203e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrain/java1/dz/bashtaevgenii/DZ1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/DemyanikNadya/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/EmelyanovSergey/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/GorilenkoAndrey/Zadanie8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/RoumyantsevPA/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz1/ruslan_gafurov/HomeWork.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/EmelyanovSergey/Dz2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/KalimullinRuslan/dz2/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/KopeikinAleksey/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/LebedevDmitry/HomeWork2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/PonomarevGleb/HomeWork.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/PospelovaElena/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/RoumyantsevPA/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/TerehovAleksei/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz2/lobysheva/Lesson2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/AndreyMelchuk/HomeTask3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/EmelyanovSergey/DZ3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/LebedevDmitry/GuessTheNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/LebedevDmitry/GuessTheWord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/OleynikovaTanya/GuessNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/OleynikovaTanya/GuessWord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/PospelovaElena/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/RoumyantsevPA/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/RuslanGafurov/Task1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/RuslanGafurov/Task2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/TerehovAleksei/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/TsygankovaNika/guess_the_number/guess_the_number.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz3/lobysheva/Lesson3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/dz/dz4/RoumyantsevPA/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson1/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson1/Primer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson2/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson2/MassClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson2/exFor/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson2/exFor/MainWhile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson3/Primer1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson3/Primer2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson3/Primer3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson3/Primer4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson3/Primer5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/java1/ru/geekbrains/java1/lesson4/MainClass.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz4/AndreyMelchuk/CrossZeroGame.java" afterPath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz4/AndreyMelchuk/CrossZeroGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java" afterPath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java" afterPath="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,24 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Human.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Human.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="52" column="55" lean-forward="true" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="55" />
+            <state relative-caret-position="765">
+              <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
               <folding>
-                <element signature="e#2153#2154#0" expanded="true" />
-                <element signature="e#2192#2193#0" expanded="true" />
+                <element signature="e#2228#2229#0" expanded="true" />
+                <element signature="e#2267#2268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,9 +120,9 @@
         <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/lesson5/Main.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/lesson5/Car.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/lesson4/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz4/AndreyMelchuk/CrossZeroGame.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java" />
+        <option value="$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java" />
       </list>
     </option>
   </component>
@@ -498,12 +447,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509428938667</updated>
       <workItem from="1509428952450" duration="676000" />
-      <workItem from="1509446273698" duration="5818000" />
+      <workItem from="1509446273698" duration="7039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6494000" />
+    <option name="totallyTimeSpent" value="7715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
@@ -517,7 +466,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28838176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28838176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -837,22 +786,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="765">
+          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding>
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2267#2268#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Human.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/java1/dz/dz5/RoumyantsevPA/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="52" column="55" lean-forward="true" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="55" />
-          <folding>
-            <element signature="e#2153#2154#0" expanded="true" />
-            <element signature="e#2192#2193#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

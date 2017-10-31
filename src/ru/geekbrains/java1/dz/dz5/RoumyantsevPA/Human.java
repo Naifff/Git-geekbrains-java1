@@ -11,6 +11,7 @@ public class Human {
     private String tel;
     private int age;
     private String gender;
+    private int paycheck;
     public static int mansCount = 0;
     public static Random rand = new Random();
     String[] namesM = {"Назар", "Станислав", "Валентин", "Олег", "Поликарп", "Тимур", "Виктор"};
@@ -21,7 +22,7 @@ public class Human {
     String[] jobR = {"Портье", "Электронщик", "Оператор печи", "Консультант по психическому здоровью", "Челюстно-лицевой радиолог", "Биржевой брокер", "Социальный работник служб защиты детей", "Казначей", "Телефонистк", "Астроном", "Учитель"};
 
     public Human() {
-        if (rand.nextInt(1) == 1) {
+        if (rand.nextInt(2) == 1) {
             this.gender = "М";
             this.name = namesM[rand.nextInt(namesM.length)];
             this.fName = fNameR[rand.nextInt(fNameR.length)];
@@ -38,6 +39,7 @@ public class Human {
         this.email = mailF[rand.nextInt(mailF.length)] + "@" + mailS[rand.nextInt(mailS.length)];
         this.tel = "+7 " + rnd() + rnd() + rnd() + " " + rnd() + rnd() + rnd() + "-" + rnd() + rnd() + "-" + rnd() + rnd();
         this.age = rand.nextInt(47)+18;
+        this.paycheck=30000+rand.nextInt(30000);
         mansCount++;
 
 
@@ -51,7 +53,12 @@ public class Human {
         System.out.println("ФИО:"+this.fName+" "+this.name+" "+this.oName);
         System.out.println("Возраст: "+this.age);
         System.out.println("Телефон/Почта: "+this.tel+"/"+this.email);
-        System.out.println(this.job);
+        System.out.println(this.job+". Зарплата: "+this.paycheck);
+    }
+
+    public boolean above40(){
+        if (this.age>40){return true;}
+        return false;
     }
 }
 
