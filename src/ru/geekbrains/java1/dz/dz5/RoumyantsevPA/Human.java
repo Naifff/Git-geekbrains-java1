@@ -27,6 +27,7 @@ public class Human {
             this.name = namesM[rand.nextInt(namesM.length)];
             this.fName = fNameR[rand.nextInt(fNameR.length)];
             this.oName = namesM[rand.nextInt(namesM.length)] + "ович";
+            this.age = rand.nextInt(42)+18;
 
 
         } else {
@@ -34,11 +35,12 @@ public class Human {
             this.name=nameF[rand.nextInt(nameF.length)];
             this.fName=fNameR[rand.nextInt(fNameR.length)]+"а";
             this.oName = namesM[rand.nextInt(namesM.length)] + "овна";
+            this.age = rand.nextInt(37)+18;
         }
         this.job = jobR[rand.nextInt(jobR.length)];
         this.email = mailF[rand.nextInt(mailF.length)] + "@" + mailS[rand.nextInt(mailS.length)];
         this.tel = "+7 " + rnd() + rnd() + rnd() + " " + rnd() + rnd() + rnd() + "-" + rnd() + rnd() + "-" + rnd() + rnd();
-        this.age = rand.nextInt(47)+18;
+
         this.paycheck=30000+rand.nextInt(30000);
         mansCount++;
 
@@ -56,9 +58,18 @@ public class Human {
         System.out.println(this.job+". Зарплата: "+this.paycheck);
     }
 
-    public boolean above40(){
-        if (this.age>40){return true;}
-        return false;
+//    public boolean above40(){
+//        if (this.age>40){return true;}
+//        return false;
+//    }
+
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getPaycheck() {
+        return paycheck;
     }
 }
 
