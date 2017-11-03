@@ -1,9 +1,9 @@
 package ru.geekbrains.java1.dz.dz4.AndreyMelchuk;
 
-import org.omg.CORBA.INTERNAL;
-import sun.security.util.Debug;
+//import org.omg.CORBA.INTERNAL;
+//import sun.security.util.Debug;
 
-import javax.swing.*;
+//import javax.swing.*;
 import java.util.*;
 
 
