@@ -24,7 +24,7 @@ public class Mmain {
             System.out.println();
             animal.printAnimal();
             animal.run(rnd.nextInt(1000));
-            animal.jump(rnd.nextInt(4));
+            animal.jump((((double)rnd.nextInt(400))/100));
             animal.swim(rnd.nextInt(20));
         }
     }

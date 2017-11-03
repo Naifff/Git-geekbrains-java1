@@ -7,7 +7,7 @@ public class Dog extends Animal {
     public void run(int a) {
         int i = 500;
         boolean b = a <= i;
-        System.out.printf("Бег: " + "%b\t", b);
+        System.out.printf(a+" Бег: " + "%b\t", b);
 
     }
 
@@ -15,14 +15,14 @@ public class Dog extends Animal {
     public void swim(int a) {
         int i = 10;
         boolean b = a <= i;
-        System.out.printf("Плыть: " + "%b\t", b);
+        System.out.printf(a+" Плыть: " + "%b\t", b);
     }
 
     @Override
     public void jump(double a) {
         double i = 0.5;
         boolean b = a <= i;
-        System.out.printf("Прыг: " + "%b\t", b);
+        System.out.printf(a+" Прыг: " + "%b\t", b);
     }
 
     public Dog() {
