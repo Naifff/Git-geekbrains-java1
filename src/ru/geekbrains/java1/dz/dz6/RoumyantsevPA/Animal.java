@@ -33,7 +33,15 @@ public abstract class Animal {
     }
 
     public void printAnimal(){
-        System.out.println(this.type+" "+this.name+" "+this.color+" "+this.age+"\n");
+        System.out.println(this.type+" "+this.name+" "+this.color+" "+this.age);
 
     }
+
+    public double mod(){
+        if (this.age<=3){return 1;}
+        else if(this.age<=5){return 0.8;}
+        else if(this.age<=10){return 0.3;}
+        else return 0.1;
+    }
+
 }
