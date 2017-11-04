@@ -44,4 +44,15 @@ public abstract class Animal {
         else return 0.1;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
