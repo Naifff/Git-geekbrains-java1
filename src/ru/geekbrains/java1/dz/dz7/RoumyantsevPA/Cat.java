@@ -23,4 +23,8 @@ public class Cat {
     public int getAppetite() {
         return appetite;
     }
+
+    public boolean isFull() {
+        return full;
+    }
 }

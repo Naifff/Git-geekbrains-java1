@@ -10,17 +10,18 @@ public class MainClass {
              Cat[] cats=new Cat[50] ;
             Plate plate = new Plate(100);
             for (Cat cat:cats                 ) {
-                cat =new Cat(catName(), rand.nextInt(10));
+                cat =new Cat(catName(), rand.nextInt(10)+2);
                 if (plate.getFood()<cat.getAppetite()){
                     //добавляем еды
-                    System.out.println("\nДобавляем еды\n");
+                    System.out.println("\nДобавляем еды");
                     plate.decreaseFood( -50);
                 }
                 System.out.println();
-                System.out.println(cat.getName());
+                System.out.println(cat.getName()+":"+cat.isFull());
                 plate.info();
                 cat.eat(plate);
                 plate.info();
+                System.out.println(cat.getName()+":"+cat.isFull());
             }
         }
 
