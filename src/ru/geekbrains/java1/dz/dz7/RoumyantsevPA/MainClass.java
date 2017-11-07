@@ -7,8 +7,7 @@ import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNames.catName;
 public class MainClass {
         public static void main(String[] args) {
             Random rand=new Random();
-            String[] catNames={"Оазис","Обаша","Обеликс","Оберег","Оберон","Обжора","Оби"};
-            Cat[] cats=new Cat[50] ;
+             Cat[] cats=new Cat[20] ;
             Plate plate = new Plate(100);
             for (Cat cat:cats                 ) {
                 cat =new Cat(catName(), rand.nextInt(10));
