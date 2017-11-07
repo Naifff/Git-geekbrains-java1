@@ -19,4 +19,8 @@ public class Cat {
     public String getName() {
         return name;
     }
+
+    public int getAppetite() {
+        return appetite;
+    }
 }
