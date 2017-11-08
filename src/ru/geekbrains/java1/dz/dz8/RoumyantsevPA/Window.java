@@ -20,7 +20,7 @@ public class Window extends JFrame {
         JButton [] jbs = new JButton [ cols*cols];
         setLayout ( new GridLayout ( cols , cols ));
         for ( int i = 0 ; i < jbs . length ; i ++) {
-            jbs [ i ] = new JButton ( "#" + i );
+            jbs [ i ] = new JButton ( " " );
             add ( jbs [ i ]);
         }
         setVisible ( true );
