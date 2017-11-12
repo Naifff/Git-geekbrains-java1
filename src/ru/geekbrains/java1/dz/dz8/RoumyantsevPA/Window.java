@@ -7,6 +7,8 @@ import java.awt.event.MouseEvent;
 import java.util.Random;
 
 public class Window extends JFrame {
+    public int pWin =0;
+    public int sWin=0;
 
     public Window() {
         int cols = 3;
@@ -16,8 +18,8 @@ public class Window extends JFrame {
         setResizable(false);
 //        int pWin = 0;
 //        int sWin = 0;
-//        setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
-        setTitle(cols + " в ряд");
+        setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
+  //      setTitle(cols + " в ряд");
         //  JPanel pan = new JPanel();
 
         JButton[] jbs = new JButton[cols * cols];
@@ -66,8 +68,8 @@ public class Window extends JFrame {
                             jbs[6].setText("W");
                             jbs[7].setText("I");
                             jbs[8].setText("N");
-//                            pWin++;
-//                            setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
+                            pWin++;
+                            setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
                         }else{
                             int turn=aiTurn(jbs);
                             if (turn!=-1){jbs[turn].setText("O");}
@@ -103,8 +105,8 @@ public class Window extends JFrame {
                         jbs[6].setText(" ");
                         jbs[7].setText("S");
                         jbs[8].setText("E");
-//                        sWin++;
-//                        setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
+                        sWin++;
+                        setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
                     }
 
                       i=0;
