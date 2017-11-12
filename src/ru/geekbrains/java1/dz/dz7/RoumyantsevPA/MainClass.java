@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.Random;
 
 //import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNames.catName;
-import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNames.read;
-import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNamesWork.readNames;
+//import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNames.read;
+import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNames.readNames;
+//import static ru.geekbrains.java1.dz.dz7.RoumyantsevPA.CatNamesWork.readNames;
 
 public class MainClass {
         public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class MainClass {
              Cat[] cats=new Cat[50] ;
             Plate plate = new Plate(100);
             for (Cat cat:cats                 ) {
-                try {
+                try { //читаем имя кота из файла, почему-то среда захотела ловить ексепшн
                     cat =new Cat(readNames(), rand.nextInt(10)+2);
                 } catch (IOException e) {
                     e.printStackTrace();
