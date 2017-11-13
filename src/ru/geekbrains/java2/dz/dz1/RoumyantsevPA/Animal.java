@@ -1,4 +1,4 @@
-package ru.geekbrains.java2.lesson1;
+package ru.geekbrains.java2.dz.dz1.RoumyantsevPA;
 
 public abstract class Animal implements Competitor {
     protected String type;
