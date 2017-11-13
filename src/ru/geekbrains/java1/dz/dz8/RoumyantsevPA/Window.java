@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Window extends JFrame {
     public int pWin =0;
@@ -59,6 +60,7 @@ public class Window extends JFrame {
                     if (jb.getText().equals(" ") && i == 0) {
                         jb.setText("X");
                         if (testWin(jbs, "X")) {
+
                             jbs[0].setText("Y");
                             jbs[1].setText("O");
                             jbs[2].setText("U");
@@ -72,8 +74,11 @@ public class Window extends JFrame {
                             setTitle(cols + " в ряд    И:" + pWin + " ИИ:" + sWin);
                         }else{
                             int turn=aiTurn(jbs);
+
                             if (turn!=-1){jbs[turn].setText("O");}
+
                             else{
+
                                 jbs[0].setText(" ");
                                 jbs[1].setText(" ");
                                 jbs[2].setText(" ");
@@ -96,6 +101,11 @@ public class Window extends JFrame {
 //                    }
 //                    System.out.println(jb);
                     if (testWin(jbs, "O")) {
+//                        try {
+//                            TimeUnit.MILLISECONDS.sleep(2000);
+//                        } catch (InterruptedException e1) {
+//                            e1.printStackTrace();
+//                        }
                         jbs[0].setText("Y");
                         jbs[1].setText("O");
                         jbs[2].setText("U");
