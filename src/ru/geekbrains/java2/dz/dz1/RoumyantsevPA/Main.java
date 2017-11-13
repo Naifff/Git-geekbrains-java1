@@ -21,8 +21,8 @@ public class Main {
     public static void main(String[] args) {
         Course c=new Course();
         Team team=new Team();
-        team.printTeam();
-      //  c.doIt(team);
+    //    team.printTeam();
+        c.doIt(team);
         team.showResults();
     }
 
