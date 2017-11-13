@@ -44,9 +44,9 @@ public class Human implements Competitor {
     @Override
     public void run(int distance) {
         if (distance <= maxRunDistance) {
-            System.out.println(name + " Cross - OK");
+            System.out.println(name + " "+distance+"\\"+maxRunDistance+" Cross - OK");
         } else {
-            System.out.println(name + " Cross - FAILED");
+            System.out.println(name + " "+distance+"\\"+maxRunDistance+" Cross - FAILED");
             active = false;
         }
     }
@@ -54,9 +54,9 @@ public class Human implements Competitor {
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight) {
-            System.out.println(name + " Jump - OK");
+            System.out.println(name + " "+height+"\\"+maxJumpHeight+" Jump - OK");
         } else {
-            System.out.println(name + " Jump - FAILED");
+            System.out.println(name + " "+height+"\\"+maxJumpHeight+" Jump - FAILED");
             active = false;
         }
     }
@@ -64,9 +64,9 @@ public class Human implements Competitor {
     @Override
     public void swim(int distance) {
         if (distance <= maxSwimDistance) {
-            System.out.println(name + " Swim - OK");
+            System.out.println(name + " "+distance+"\\"+maxSwimDistance+" Swim - OK");
         } else {
-            System.out.println(name + " Swim - FAILED");
+            System.out.println(name + " "+distance+"\\"+maxSwimDistance+" Swim - FAILED");
             active = false;
         }
     }

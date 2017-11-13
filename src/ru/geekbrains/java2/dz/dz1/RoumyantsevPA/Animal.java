@@ -46,9 +46,9 @@ public abstract class Animal implements Competitor {
     @Override
     public void run(int distance) {
         if (distance <= maxRunDistance) {
-            System.out.println(type + " " + name + " Cross - OK");
+            System.out.println(type + " " + name + " "+distance+"\\"+maxRunDistance+" Cross - OK");
         } else {
-            System.out.println(type + " " + name + " Cross - FAILED");
+            System.out.println(type + " " + name + " "+distance+"\\"+maxRunDistance+" Cross - FAILED");
             onDistance = false;
         }
     }
@@ -56,9 +56,9 @@ public abstract class Animal implements Competitor {
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight) {
-            System.out.println(type + " " + name + " Jump - OK");
+            System.out.println(type + " " + name +" "+height+"\\"+maxJumpHeight+ " Jump - OK");
         } else {
-            System.out.println(type + " " + name + " Jump - FAILED");
+            System.out.println(type + " " + name +" "+height+"\\"+maxJumpHeight+ " Jump - FAILED");
             onDistance = false;
         }
     }
@@ -71,9 +71,9 @@ public abstract class Animal implements Competitor {
             return;
         }
         if (distance <= maxSwimDistance) {
-            System.out.println(type + " " + name + " Swim - OK");
+            System.out.println(type + " " + name +" "+distance+"\\"+maxSwimDistance+ " Swim - OK");
         } else {
-            System.out.println(type + " " + name + " Swim - FAILED");
+            System.out.println(type + " " + name +" "+distance+"\\"+maxSwimDistance+ " Swim - FAILED");
             onDistance = false;
         }
     }
