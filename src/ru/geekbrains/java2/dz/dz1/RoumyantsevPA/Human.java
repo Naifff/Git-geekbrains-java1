@@ -2,10 +2,13 @@ package ru.geekbrains.java2.dz.dz1.RoumyantsevPA;
 
 public class Human implements Competitor {
     protected String name;
-    protected boolean active;
+    protected boolean active=true;
     protected int maxRunDistance;
     protected int maxJumpHeight;
     protected int maxSwimDistance;
+    protected int age;
+    protected  double speed;
+
 
     public String getName() {
         return name;
@@ -16,12 +19,26 @@ public class Human implements Competitor {
         return active;
     }
 
+    public Human(String name, int age, double speed) {
+        this.name = name;
+        this.active = true;
+        this.maxRunDistance = 5000;
+        this.maxJumpHeight = 100;
+        this.maxSwimDistance = 2000;
+        this.age =age;
+        this.speed =speed;
+
+    }
+
     public Human(String name) {
         this.name = name;
         this.active = true;
         this.maxRunDistance = 5000;
         this.maxJumpHeight = 100;
         this.maxSwimDistance = 2000;
+        //this.age =age;
+       // this.speed =speed;
+
     }
 
     @Override
