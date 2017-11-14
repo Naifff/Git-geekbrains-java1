@@ -9,7 +9,7 @@ package ru.geekbrains.java2.dz.dz1.RoumyantsevPA;
 //
 //        То есть в итоге должно быть что-то вроде:
 //
-//public static void main(String[] args) {
+//        public static void main(String[] args) {
 //        Course c = new Course(...); // Создаем полосу препятствий
 //        Team team = new Team(...); // Создаем команду
 //        c.doIt(team); // Просим команду пройти полосу
@@ -19,11 +19,14 @@ package ru.geekbrains.java2.dz.dz1.RoumyantsevPA;
 
 public class Main {
     public static void main(String[] args) {
-        Course c=new Course();
-        Team team=new Team();
-    //    team.printTeam();
+        long t1 = System.currentTimeMillis();
+        Course c = new Course();
+        Team team = new Team();
+        //    team.printTeam();
         c.doIt(team);
         team.showResults();
+        long t2 = System.currentTimeMillis();
+        System.out.println("\nПрошло времени: " + (t2 - t1) + "мс.");
     }
 
 }

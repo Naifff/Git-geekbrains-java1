@@ -3,12 +3,13 @@ package ru.geekbrains.java2.dz.dz1.RoumyantsevPA;
 public abstract class Animal implements Competitor {
     protected String type;
     protected String name;
-    protected boolean onDistance=true;
+    protected boolean onDistance = true;
     protected int maxRunDistance;
     protected int maxJumpHeight;
     protected int maxSwimDistance;
     protected int age;
     protected double speed;
+    protected double time = 0.;
 
     public String getName() {
         return name;
@@ -19,15 +20,15 @@ public abstract class Animal implements Competitor {
         return onDistance;
     }
 
-    public Animal(String type, String name, int maxRunDistance, int maxJumpHeight, int maxSwimDistance, int age,double speed) {
+    public Animal(String type, String name, int maxRunDistance, int maxJumpHeight, int maxSwimDistance, int age, double speed) {
         this.type = type;
         this.name = name;
         this.onDistance = true;
         this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
         this.maxSwimDistance = maxSwimDistance;
-        this.age=age;
-        this.speed=speed;
+        this.age = age;
+        this.speed = speed;
 
     }
 
@@ -38,17 +39,18 @@ public abstract class Animal implements Competitor {
         this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
         this.maxSwimDistance = maxSwimDistance;
-      //  this.age=age;
-      //  this.speed=speed;
+        //  this.age=age;
+        //  this.speed=speed;
 
     }
 
     @Override
     public void run(int distance) {
         if (distance <= maxRunDistance) {
-            System.out.println(type + " " + name + " "+distance+"\\"+maxRunDistance+" Cross - OK");
+            System.out.println(type + " " + name + " " + distance + "\\" + maxRunDistance + " Cross - OK");
+            this.time += distance / this.speed;
         } else {
-            System.out.println(type + " " + name + " "+distance+"\\"+maxRunDistance+" Cross - FAILED");
+            System.out.println(type + " " + name + " " + distance + "\\" + maxRunDistance + " Cross - FAILED");
             onDistance = false;
         }
     }
@@ -56,9 +58,9 @@ public abstract class Animal implements Competitor {
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight) {
-            System.out.println(type + " " + name +" "+height+"\\"+maxJumpHeight+ " Jump - OK");
+            System.out.println(type + " " + name + " " + height + "\\" + maxJumpHeight + " Jump - OK");
         } else {
-            System.out.println(type + " " + name +" "+height+"\\"+maxJumpHeight+ " Jump - FAILED");
+            System.out.println(type + " " + name + " " + height + "\\" + maxJumpHeight + " Jump - FAILED");
             onDistance = false;
         }
     }
@@ -71,9 +73,10 @@ public abstract class Animal implements Competitor {
             return;
         }
         if (distance <= maxSwimDistance) {
-            System.out.println(type + " " + name +" "+distance+"\\"+maxSwimDistance+ " Swim - OK");
+            System.out.println(type + " " + name + " " + distance + "\\" + maxSwimDistance + " Swim - OK");
+            this.time += distance / this.speed;
         } else {
-            System.out.println(type + " " + name +" "+distance+"\\"+maxSwimDistance+ " Swim - FAILED");
+            System.out.println(type + " " + name + " " + distance + "\\" + maxSwimDistance + " Swim - FAILED");
             onDistance = false;
         }
     }

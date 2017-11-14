@@ -30,13 +30,13 @@ public class Course {
         for(int i=0;i<barriers.length;i++){
             switch (rnd.nextInt(3)) {
                 case 0:
-                    this.barriers[i] = new Cross(rnd.nextInt(500) + 0);
+                    this.barriers[i] = new Cross(rnd.nextInt(900) + 5);
                     break;
                 case 1:
-                    this.barriers[i] = new Wall(rnd.nextInt(2) + 0);
+                    this.barriers[i] = new Wall(rnd.nextInt(19) + 1);
                     break;
                 default:
-                    this.barriers[i] = new Water(rnd.nextInt(10) + 0);
+                    this.barriers[i] = new Water(rnd.nextInt(18) + 1);
             }
 
 
@@ -46,7 +46,7 @@ public class Course {
     }
 
     public void doIt(Team t){
-        long t1 =  System.currentTimeMillis();
+      //  long t1 =  System.currentTimeMillis();
         for (Competitor member:t.members
              ) {
             for (Obstacle barrier:this.barriers
@@ -60,8 +60,8 @@ public class Course {
             }System.out.println();
 
         }
-        long t2 =  System.currentTimeMillis();
-        System.out.println("Прошло времени: " + (t2 - t1)+"мс.");
+//        long t2 =  System.currentTimeMillis();
+//        System.out.println("Прошло времени: " + (t2 - t1)+"мс.");
 
 
     }
