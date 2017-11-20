@@ -1,6 +1,6 @@
 package ru.geekbrains.java1.dz.dz7.AndreyMelchuk;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+//import com.sun.org.apache.xpath.internal.operations.Bool;
 
 public class Plate {
     private int food ;
