@@ -15,11 +15,18 @@ public class Main {
         }
         //fXf[0][0] = null;
         //fXf[0][0]="n";
-        int result = myMethod(fXf);
+        int result;
+        try {
+            result = myMethod(fXf);
+            System.out.println("\n Count: " + result);
+        } catch (MyArrayDataException e) {
+            e.printStackTrace();
+        } catch (MySizeArrayException e) {
+            e.printStackTrace();
+        }
         for (int i = 0; i < fXf.length; i++) {
             System.out.println(Arrays.toString(fXf[i]));
         }
-        System.out.println("\n Count: " + result);
     }
 
     private static int myMethod(String[][] fourXfour) {
@@ -42,7 +49,6 @@ public class Main {
     }
 
     private static boolean testStr2Int(String s) {
-        int l = 0;
         if (s == null) {
             return false;
         }
