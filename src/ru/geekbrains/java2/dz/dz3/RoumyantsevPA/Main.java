@@ -45,7 +45,7 @@ public class Main {
 //        }
 //        System.out.println();
 
-        System.out.println(bcd);
+        System.out.println("Уникальных слов: "+bcd.size()+"\n"+bcd);
         System.out.println(cde);
     }
 
