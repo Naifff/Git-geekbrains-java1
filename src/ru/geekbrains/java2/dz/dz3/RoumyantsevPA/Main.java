@@ -9,20 +9,20 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> abc = new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
         //в качестве текста использовалась Песнь первая Руслана и Людмилы )
-        abc = readText();
-        Set<String> bcd = new HashSet<String>();
-        Map<String, Integer> cde = new HashMap<String, Integer>();
-        for (String a : abc
+        arrayList = readText();
+        Set<String> set = new HashSet<String>();
+        Map<String, Integer> hashMap = new HashMap<String, Integer>();
+        for (String a : arrayList
                 ) {
-            bcd.add(a);
-            if (cde.containsKey(a)) {
+            set.add(a);
+            if (hashMap.containsKey(a)) {
                 int count;
-                count = cde.get(a) + 1;
-                cde.put(a, count);
+                count = hashMap.get(a) + 1;
+                hashMap.put(a, count);
             } else {
-                cde.put(a, 1);
+                hashMap.put(a, 1);
             }
         }
 //        for (String i : cde.keySet()
@@ -45,8 +45,8 @@ public class Main {
 //        }
 //        System.out.println();
 
-        System.out.println("Уникальных слов: "+bcd.size()+"\n"+bcd);
-        System.out.println(cde);
+        System.out.println("Уникальных слов: " + set.size() + "\n" + set);
+        System.out.println(hashMap);
     }
 
 
