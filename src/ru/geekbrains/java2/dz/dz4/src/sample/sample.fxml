@@ -10,25 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: true; -fx-max-width: true;">
-         <children>
-            <TextArea prefHeight="200.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <TextField />
-                  <Button mnemonicParsing="false" text="Button" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
-</GridPane>
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="sample.Controller">
+    <TextArea fx:id="chatWindow" editable="false" VBox.vgrow="ALWAYS"/>
+    <HBox>
+        <TextField maxWidth="Infinity"  HBox.hgrow="ALWAYS" />
+        <Button text="Button"/>
+    </HBox>
+</VBox>
