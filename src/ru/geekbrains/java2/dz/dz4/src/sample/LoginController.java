@@ -1,5 +1,7 @@
 package sample;
 
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -46,14 +47,15 @@ public class LoginController {
 
 
         }
-        String u=login.getText();
-        String p=password.getText();
+//        String u=login.getText();
+//        String p=password.getText();
         login.clear();
         password.clear();
-      //  System.out.println("User:"+u.hashCode()+"\nPass:"+p.hashCode());
-       // System.out.println(login.getText() + " " + password.getText());
+        login.requestFocus();
+        //  System.out.println("User:"+u.hashCode()+"\nPass:"+p.hashCode());
+        // System.out.println(login.getText() + " " + password.getText());
         //System.out.println("id = " + id);
 
 
 
-}}
+    }}

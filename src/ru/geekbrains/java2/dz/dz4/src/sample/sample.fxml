@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
+
 <?import javafx.scene.layout.VBox?>
-
-
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 <VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121"
       fx:controller="sample.Controller" >
     <TextArea fx:id="chatWindow" editable="false" VBox.vgrow="ALWAYS"/>
     <HBox>
-        <TextField fx:id="textField" promptText="введите сообщение" maxWidth="Infinity"  HBox.hgrow="ALWAYS" onAction="#textSend"/>
+        <TextField fx:id="textField" promptText="введите сообщение" maxWidth="Infinity" HBox.hgrow="ALWAYS" onAction="#textSend"/>
         <Button fx:id="sendBtn" text="      " onAction="#textSend"/>
     </HBox>
 </VBox>
