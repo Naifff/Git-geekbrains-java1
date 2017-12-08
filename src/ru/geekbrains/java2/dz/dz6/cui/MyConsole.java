@@ -1,6 +1,8 @@
-package ru.geekbrains.java2.dz.dz6.RoumyantsevPA.cui;
+package ru.geekbrains.java2.dz.dz6.cui;
 
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -12,16 +14,16 @@ public class MyConsole {
     final String SERVER_ADDR = "localhost";
     final int SERVER_PORT = 8189;
     Socket sock;
-    Scanner in;
+    DataInputStream in;
     Scanner sc = new Scanner(System.in);
-    PrintWriter out;
+    DataOutputStream out;
     boolean end = false;
 
     public MyConsole() {
         try {
             sock = new Socket(SERVER_ADDR, SERVER_PORT);
-            in = new Scanner(sock.getInputStream());
-            out = new PrintWriter(sock.getOutputStream());
+            in = new DataInputStream(sock.getInputStream());
+            out = new DataOutputStream(sock.getOutputStream());
         } catch (IOException e) {
             System.out.println("Сервер не запущен");
             e.printStackTrace();
@@ -29,19 +31,24 @@ public class MyConsole {
 
         new Thread(() -> {
             Thread outConsole = new Thread(() -> {
-                while (true) {
-                    if (sc.hasNext()) {
-                        String a = sc.nextLine();
-                        out.println(a);
-                        out.flush();
+                try {
+                    while (true) {
+                        if (sc.hasNext()) {
+                            String a = sc.nextLine();
+                            out.writeUTF(a);
+                            out.flush();
+                        }
                     }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             });
+            outConsole.setDaemon(true);
             outConsole.start();
 
-            while (true) {
-                if (in.hasNext()) {
-                    String w = in.nextLine();
+            try {
+                while (true) {
+                    String w = in.readUTF();
                     if (w.equalsIgnoreCase("end session")) {
                         end = true;
                         System.out.println(w);
@@ -49,8 +56,10 @@ public class MyConsole {
                     }
                     System.out.println(w);
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            outConsole.stop();
+            // outConsole.stop();
             try {
                 out.close();
                 in.close();

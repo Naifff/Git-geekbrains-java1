@@ -1,5 +1,7 @@
-package ru.geekbrains.java2.dz.dz6.RoumyantsevPA.server;
+package ru.geekbrains.java2.dz.dz6.server;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -7,8 +9,8 @@ import java.util.Scanner;
 
 public class ClientHandler implements Runnable {
     private Socket s;
-    private PrintWriter out;
-    private Scanner in;
+    private DataOutputStream out;
+    private DataInputStream in;
     private Scanner sc = new Scanner(System.in);
     private static int CLIENTS_COUNT = 0;
     private String name;
@@ -16,11 +18,11 @@ public class ClientHandler implements Runnable {
     public ClientHandler(Socket s) {
         try {
             this.s = s;
-            out = new PrintWriter(s.getOutputStream());
-            in = new Scanner(s.getInputStream());
+            out = new DataOutputStream(s.getOutputStream());
+            in = new DataInputStream(s.getInputStream());
             CLIENTS_COUNT++;
             name = "Client #" + CLIENTS_COUNT;
-            out.println("Добро пажаловать в секретный хакерский чат\nПожалуйста авторизируйтесь:\nlogin:password");
+            out.writeUTF("Добро пажаловать в секретный хакерский чат\nПожалуйста авторизируйтесь:\nlogin:password");
             out.flush();
         } catch (IOException e) {
         }
@@ -30,41 +32,50 @@ public class ClientHandler implements Runnable {
     public void run() {
         new Thread(() -> {
             Thread outConsole = new Thread(() -> {
-                while (true) {
-                    if (sc.hasNext()) {
-                        String a = sc.nextLine();
-                        out.println(a);
-                        out.flush();
+                try {
+                    while (true) {
+                        if (sc.hasNext()) {
+                            String a = sc.nextLine();
+                            out.writeUTF(a);
+                            out.flush();
+                        }
                     }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+
             });
+            outConsole.setDaemon(true);
             outConsole.start();
 
             String[] name2 = new String[2];
             String hName = "";
             boolean auth = false;
-            while (true) {
-                if (in.hasNext()) {
-                    String w = in.nextLine();
+            try {
+                while (true) {
+                    String w = in.readUTF();
                     System.out.println(name + ": " + w);
                     if (!auth) {
                         name2 = w.split(":");
                         auth = true;
                         hName = name2[0];
-                        out.println("Здравствуйте " + hName);
+                        out.writeUTF("Здравствуйте " + hName);
                         out.flush();
                     } else {
                         if (w.equalsIgnoreCase("END")) {
-                            out.println("end session");
+                            out.writeUTF("end session");
                             out.flush();
                             break;
                         }
-                        out.println(hName + ">echo: " + w);
+                        out.writeUTF(hName + ">echo: " + w);
                         out.flush();
                     }
-                }
+                                    }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            outConsole.stop();
+
+            // outConsole.stop();
             try {
                 System.out.println("Client disconnected");
                 s.close();
