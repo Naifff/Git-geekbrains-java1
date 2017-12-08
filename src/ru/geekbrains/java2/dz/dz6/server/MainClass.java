@@ -15,13 +15,14 @@ public class MainClass {
             new Thread(new ClientHandler(s)).run();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                s.close();
-                System.out.println("Server closed");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
+// finally {
+//            try {
+//                s.close();
+//                System.out.println("Server closed");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 }
