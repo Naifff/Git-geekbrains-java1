@@ -121,15 +121,11 @@ public class SQLHandler {
         }
     }
 
-    public void myExecuteUpdate(String request) throws SQLException {
-        stmt.executeUpdate(request);
+    public int myExecuteUpdate(String request) throws SQLException {
+        return stmt.executeUpdate(request);
     }
 
     public ResultSet mySelect(String request) throws SQLException {
         return stmt.executeQuery(request);
-//        ResultSet rs = stmt.executeQuery("SELECT * FROM students;");
-//        while (rs.next()) {
-//            System.out.println(rs.getInt(1) + " " + rs.getString("name") + " " + rs.getInt(3));
-//        }
     }
 }
