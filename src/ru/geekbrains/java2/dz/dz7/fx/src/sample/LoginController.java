@@ -104,5 +104,20 @@ public class LoginController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+//        new Thread(() ->
+//        {
+//            try {
+//                Thread.sleep(120000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            if (!authorized) {try {
+//                socket.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            }
+//        }).start();
     }
 }

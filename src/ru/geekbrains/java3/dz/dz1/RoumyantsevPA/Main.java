@@ -63,15 +63,12 @@ class Orange extends Fruit {
 }
 
 class Box<T extends Fruit> {
-    public int boxSize() {
-        return box.size();
-    }
+
+    private ArrayList<Fruit> box;
 
     public Box() {
         this.box = new ArrayList<>();
     }
-
-    private ArrayList<Fruit> box;
 
     public float weight() {
         float res = 0f;
@@ -89,10 +86,8 @@ class Box<T extends Fruit> {
         for (Fruit o : this.box
                 ) {
             b.box.add(o);
-
         }
         this.box.clear();
-
     }
 
     public void addFruit(String s) {
@@ -102,12 +97,8 @@ class Box<T extends Fruit> {
         if ("orange".equalsIgnoreCase(s)) {
             this.box.add(new Orange());
         }
-
     }
-
-
 }
-
 
 public class Main {
     public static void main(String[] args) {
@@ -139,16 +130,14 @@ public class Main {
             System.out.println("Вес ящика с апельсинами и вес ящика с яблоками не равны");
         }
 
-                Box<Orange> orangeBox1 = new Box<>();
+        Box<Orange> orangeBox1 = new Box<>();
         for (int i = 0; i < 3; i++) {
             orangeBox.addFruit("Orange");
         }
         orangeBox.pour(orangeBox1);
-        System.out.println("Количество элементов в ящике, в который пересыпали: " + orangeBox1.boxSize());
-        System.out.println("Количество элементов в ящике, из которого пересыпали: " + orangeBox.boxSize());
+        System.out.println("Вес ящика, в который пересыпали: " + orangeBox1.weight());
+        System.out.println("Вес ящика, из которого пересыпали: " + orangeBox.weight());
         //appleBox.pour(orangeBox); //не скомпилируется
-
-
     }
 
     public static Object[] task1(Object[] arr, int i, int j) {
@@ -157,7 +146,6 @@ public class Main {
         arr[i] = arr[j];
         arr[j] = temp;
         return arr;
-
     }
 
     public static <T> ArrayList<T> task2(T[] arr) {
@@ -169,11 +157,4 @@ public class Main {
         }
         return res;
     }
-
-
 }
-
-
-
-
-

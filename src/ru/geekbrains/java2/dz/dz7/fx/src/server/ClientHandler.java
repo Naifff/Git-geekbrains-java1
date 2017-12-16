@@ -12,6 +12,8 @@ public class ClientHandler implements Runnable {
     private DataOutputStream out;
     private DataInputStream in;
     private String name;
+    boolean authorized = false;
+    long t1 = System.currentTimeMillis();
 
 
     public ClientHandler(Socket s, MyServer owner) {
@@ -31,6 +33,21 @@ public class ClientHandler implements Runnable {
         try {
             out.writeUTF("Здравствуйте, для авторизации наберите: auth login password" + System.lineSeparator() + "для помощи help");
             out.flush();
+            new Thread(() ->
+            {
+                try {
+                    Thread.sleep(120000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if (!authorized) {
+                    try {
+                        s.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
             while (true) {
                 String w = in.readUTF();
                 if (name.isEmpty()) {
@@ -39,6 +56,7 @@ public class ClientHandler implements Runnable {
                         String t = authLoginPass(n[1], n[2]);
                         if (t != null) {
                             out.writeUTF("Авторизация успешная");
+                            authorized = true;
                             owner.addClient(this);
                             out.flush();
                             name = t;
@@ -54,34 +72,54 @@ public class ClientHandler implements Runnable {
                         }
                         w = null;
                     }
-if(w!=null){
-                    n = w.split(" ");
+                    if (w != null) {
+                        n = w.split(" ");
 
-                    if ("auth".equalsIgnoreCase(n[0])) {
-                        String t = authLoginPass(n[1], n[2]);
-                        if (t != null) {
-                            out.writeUTF("Авторизация успешная");
-                            owner.addClient(this);
-                            out.flush();
-                            name = t;
-                            owner.setUserId(t, this);
-                            owner.broadcastMsg("$ " + name + " присоединился к каналу");
-                            break;
-                        } else {
-                            sendMsg("Auth Error");
-                            owner.remove(this);
-                            owner.removeId(name);
+                        if ("auth".equalsIgnoreCase(n[0])) {
+                            String t = authLoginPass(n[1], n[2]);
+                            if (t != null) {
+                                out.writeUTF("Авторизация успешная");
+                                owner.addClient(this);
+                                out.flush();
+                                name = t;
+                                owner.setUserId(t, this);
+                                owner.broadcastMsg("$ " + name + " присоединился к каналу");
+                                break;
+                            } else {
+                                sendMsg("Auth Error");
+                                owner.remove(this);
+                                owner.removeId(name);
 
+                            }
+                            w = null;
                         }
-                        w = null;
-                    }}
+                    }
 
                 }
             }
-
+            new Thread(() ->
+            {
+                while (true) {
+                    try {
+                        Thread.sleep(120000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    if (System.currentTimeMillis() - t1 > 900000)
+                    {
+                        try {
+                            s.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }).start();
             while (true) {
 
+
                 String w = in.readUTF();
+                t1 = System.currentTimeMillis();
                 if ("list".equalsIgnoreCase(w)) {
                     if ("root".equals(name)) {
                         out.writeUTF(owner.listRoot());
@@ -95,6 +133,12 @@ if(w!=null){
                 }
                 if ("help".equalsIgnoreCase(w)) {
                     out.writeUTF(owner.help());
+                    out.flush();
+                    w = null;
+                }
+
+                if ("whoami".equalsIgnoreCase(w)) {
+                    out.writeUTF(name);
                     out.flush();
                     w = null;
                 }
@@ -164,5 +208,6 @@ if(w!=null){
         return login;
 
     }
+
 
 }

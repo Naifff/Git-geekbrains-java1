@@ -106,6 +106,6 @@ public class MyServer {
     }
 
     public String help() {
-        return "list - список онлайн пользователей" + System.lineSeparator() + "@user - отправка личного сообщения" + System.lineSeparator() + "end - заверщение работы";
+        return "list - список онлайн пользователей" + System.lineSeparator() + "@user - отправка личного сообщения" + System.lineSeparator() + "end - заверщение работы " + System.lineSeparator() + "whoami - логин текущего пользователя";
     }
 }
