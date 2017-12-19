@@ -1,3 +1,6 @@
+package ru.geekbrains.java3.java3lesson3.src;
+
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
