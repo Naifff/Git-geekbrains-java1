@@ -1,4 +1,4 @@
-package ru.geekbrains.homework5;
+package ru.geekbrains.java3.dz.dz5.RoumyantsevPA;
 
 public abstract class Stage {
     protected int length;

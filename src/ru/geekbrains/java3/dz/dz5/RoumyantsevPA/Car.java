@@ -1,7 +1,14 @@
-package ru.geekbrains.homework5;
+package ru.geekbrains.java3.dz.dz5.RoumyantsevPA;
+
+import java.util.concurrent.BrokenBarrierException;
 
 public class Car implements Runnable {
     private static int CARS_COUNT;
+    public static String winer;
+
+    public String getWiner() {
+        return winer;
+    }
 
     static {
         CARS_COUNT = 0;
@@ -32,11 +39,23 @@ public class Car implements Runnable {
             System.out.println(this.name + " готовится");
             Thread.sleep(500 + (int)(Math.random() * 800));
             System.out.println(this.name + " готов");
+MainClass.cb.await();
         } catch (Exception e) {
             e.printStackTrace();
         }
         for (int i = 0; i < race.getStages().size(); i++) {
             race.getStages().get(i).go(this);
+        }
+        if(!MainClass.win.get()){
+            this.winer=this.name;
+            MainClass.win.set(true);
+        }
+        try {
+            MainClass.cb.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (BrokenBarrierException e) {
+            e.printStackTrace();
         }
     }
 }
