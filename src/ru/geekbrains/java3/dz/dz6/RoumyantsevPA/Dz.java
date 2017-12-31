@@ -15,29 +15,61 @@ package ru.geekbrains.java3.dz.dz6.RoumyantsevPA;
 и после проведения тестов эти записи не должны быть удалены/изменены/добавлены.
  */
 
+import java.sql.*;
 import java.util.Arrays;
 
-public  class Dz {
-    public static int[] task1(int... args){
-        int count=-1;
-        for(int i=args.length-1;i>1;i--){
-            if(args[i]==4){
-                count=i;
+public class Dz {
+    public static int[] task1(int... args) {
+        int count = -1;
+        for (int i = args.length - 1; i > 1; i--) {
+            if (args[i] == 4) {
+                count = i;
                 break;
             }
         }
-        if (count==-1){
-            throw new RuntimeException ();
+        if (count == -1) {
+            throw new RuntimeException();
         }
-        int out[]=new int [args.length-count-1];
-        for(int i=0;i<args.length-count-1;i++){
-            out[i]=args[count+i+1];
+        int out[] = new int[args.length - count - 1];
+        for (int i = 0; i < args.length - count - 1; i++) {
+            out[i] = args[count + i + 1];
         }
         return out;
     }
 
-    public static void main(String[] args) {
-        int []test={1, 2, 4, 4, 2, 3, 4, 1, 7};
-        System.out.println(Arrays.toString(task1(test)));
+    public static boolean task2(int... args) {
+        int one = 0;
+        int four = 0;
+        for (int arg : args
+                ) {
+            if (arg == 4 || arg == 1) {
+                if (arg == 4) {
+                    four++;
+                } else {
+                    one++;
+                }
+                continue;
+            }
+            return false;
+        }
+        if (one != 0 && four != 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Connection connection;
+        Statement stmt;
+        PreparedStatement ps;
+        Class.forName("org.sqlite.JDBC");
+        connection = DriverManager.getConnection("jdbc:sqlite:.\\src\\ru\\geekbrains\\java3\\dz\\dz6\\RoumyantsevPA\\data.db");
+        stmt = connection.createStatement();
+
+        stmt.executeUpdate("DROP TABLE IF EXISTS students");
+        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, point INTEGER, name TEXT UNIQUE);");
+        for (int i = 0; i < 10; i++) {
+            stmt.executeUpdate("INSERT INTO students (point , name) VALUES (" + ((int) (Math.random() * 100) + (int) (Math.random() * 10)) + ",'" + "Bob" + i + "');");
+        }
     }
 }
